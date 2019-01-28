@@ -1,0 +1,27 @@
+Log file created at: 2018/12/24 14:54:15
+Running on machine: e535c6b06401
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1224 14:54:15.362835     1 logging.cpp:201] INFO level logging started!
+I1224 14:54:15.363726     1 main.cpp:242] Build: 2018-09-21 14:54:37 by ubuntu
+I1224 14:54:15.363755     1 main.cpp:243] Version: 1.7.0
+I1224 14:54:15.363770     1 main.cpp:246] Git tag: 1.7.0
+I1224 14:54:15.363782     1 main.cpp:250] Git SHA: 8419b870c571ac11825c883fa20ea3b7d4348d34
+I1224 14:54:15.369557     1 main.cpp:344] Using 'hierarchical' allocator
+I1224 14:54:15.372723     1 master.cpp:413] Master a5e58c04-b76d-4aa5-981b-4b18253274ea (e535c6b06401) started on 172.17.0.4:5050
+I1224 14:54:15.372764     1 master.cpp:416] Flags at startup: --agent_ping_timeout="15secs" --agent_reregister_timeout="10mins" --allocation_interval="1secs" --allocator="hierarchical" --authenticate_agents="false" --authenticate_frameworks="false" --authenticate_http_frameworks="false" --authenticate_http_readonly="false" --authenticate_http_readwrite="false" --authentication_v0_timeout="15secs" --authenticators="crammd5" --authorizers="local" --filter_gpu_resources="true" --framework_sorter="drf" --help="false" --hostname_lookup="true" --http_authenticators="basic" --initialize_driver_logging="true" --log_auto_initialize="true" --log_dir="/var/log/mesos" --logbufsecs="0" --logging_level="INFO" --max_agent_ping_timeouts="5" --max_completed_frameworks="50" --max_completed_tasks_per_framework="1000" --max_unreachable_tasks_per_framework="1000" --memory_profiling="false" --min_allocatable_resources="cpus:0.01|mem:32" --port="5050" --quiet="false" --quorum="1" --recovery_agent_removal_limit="100%" --registry="in_memory" --registry_fetch_timeout="1mins" --registry_gc_interval="15mins" --registry_max_agent_age="2weeks" --registry_max_agent_count="102400" --registry_store_timeout="20secs" --registry_strict="false" --require_agent_domain="false" --role_sorter="drf" --root_submissions="true" --version="false" --webui_dir="/usr/share/mesos/webui" --work_dir="/var/tmp/mesos" --zk="zk://127.0.0.1:2181/mesos" --zk_session_timeout="10secs"
+I1224 14:54:15.372977     1 master.cpp:467] Master allowing unauthenticated frameworks to register
+I1224 14:54:15.372994     1 master.cpp:473] Master allowing unauthenticated agents to register
+I1224 14:54:15.373008     1 master.cpp:480] Master allowing HTTP frameworks to register without authentication
+I1224 14:54:15.373023     1 master.cpp:521] Using default 'crammd5' authenticator
+W1224 14:54:15.373039     1 authenticator.cpp:513] No credentials provided, authentication requests will be refused
+I1224 14:54:15.373194     1 authenticator.cpp:520] Initializing server SASL
+I1224 14:54:15.379995     8 master.cpp:2047] Successfully attached file '/var/log/mesos/mesos-master.INFO'
+I1224 14:54:15.382838    14 contender.cpp:152] Joining the ZK group
+W1224 14:54:25.378593    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 14:54:25.379295    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 14:54:25.379315    14 group.cpp:511] ZooKeeper session expired
+I1224 14:54:25.380246    10 group.cpp:511] ZooKeeper session expired
+W1224 14:54:35.383070     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 14:54:35.383070    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 14:54:35.383975    12 group.cpp:511] ZooKeeper session expired
+I1224 14:54:35.383968     9 group.cpp:511] ZooKeeper session expired

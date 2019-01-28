@@ -1,0 +1,109 @@
+Log file created at: 2018/12/23 15:16:21
+Running on machine: mesos-master
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1223 15:16:21.602497     1 logging.cpp:201] INFO level logging started!
+I1223 15:16:21.602906     1 main.cpp:242] Build: 2018-09-21 14:54:37 by ubuntu
+I1223 15:16:21.602928     1 main.cpp:243] Version: 1.7.0
+I1223 15:16:21.602943     1 main.cpp:246] Git tag: 1.7.0
+I1223 15:16:21.602959     1 main.cpp:250] Git SHA: 8419b870c571ac11825c883fa20ea3b7d4348d34
+I1223 15:16:21.604100     1 main.cpp:344] Using 'hierarchical' allocator
+I1223 15:16:21.606963     1 master.cpp:413] Master f648ed87-50ef-44ec-b0e8-063d65586344 (172.19.10.16) started on 172.19.10.16:5050
+I1223 15:16:21.606998     1 master.cpp:416] Flags at startup: --agent_ping_timeout="15secs" --agent_reregister_timeout="10mins" --allocation_interval="1secs" --allocator="hierarchical" --authenticate_agents="false" --authenticate_frameworks="false" --authenticate_http_frameworks="false" --authenticate_http_readonly="false" --authenticate_http_readwrite="false" --authentication_v0_timeout="15secs" --authenticators="crammd5" --authorizers="local" --filter_gpu_resources="true" --framework_sorter="drf" --help="false" --hostname="172.19.10.16" --hostname_lookup="true" --http_authenticators="basic" --initialize_driver_logging="true" --ip="172.19.10.16" --log_auto_initialize="true" --log_dir="/var/log/mesos" --logbufsecs="0" --logging_level="INFO" --max_agent_ping_timeouts="5" --max_completed_frameworks="50" --max_completed_tasks_per_framework="1000" --max_unreachable_tasks_per_framework="1000" --memory_profiling="false" --min_allocatable_resources="cpus:0.01|mem:32" --port="5050" --quiet="false" --quorum="2" --recovery_agent_removal_limit="100%" --registry="in_memory" --registry_fetch_timeout="1mins" --registry_gc_interval="15mins" --registry_max_agent_age="2weeks" --registry_max_agent_count="102400" --registry_store_timeout="20secs" --registry_strict="false" --require_agent_domain="false" --role_sorter="drf" --root_submissions="true" --version="false" --webui_dir="/usr/share/mesos/webui" --work_dir="/var/tmp/mesos" --zk="zk://172.19.10.11:2181,172.19.10.12:2181,172.19.10.13:2181/mesos" --zk_session_timeout="10secs"
+I1223 15:16:21.607177     1 master.cpp:467] Master allowing unauthenticated frameworks to register
+I1223 15:16:21.607194     1 master.cpp:473] Master allowing unauthenticated agents to register
+I1223 15:16:21.607213     1 master.cpp:480] Master allowing HTTP frameworks to register without authentication
+I1223 15:16:21.607237     1 master.cpp:521] Using default 'crammd5' authenticator
+W1223 15:16:21.607259     1 authenticator.cpp:513] No credentials provided, authentication requests will be refused
+I1223 15:16:21.607442     1 authenticator.cpp:520] Initializing server SASL
+I1223 15:16:21.610590     8 master.cpp:2047] Successfully attached file '/var/log/mesos/mesos-master.INFO'
+I1223 15:16:21.613071    13 contender.cpp:152] Joining the ZK group
+I1223 15:16:28.045958    13 group.cpp:341] Group process (zookeeper-group(1)@172.19.10.16:5050) connected to ZooKeeper
+I1223 15:16:28.046041    13 group.cpp:831] Syncing group operations: queue size (joins, cancels, datas) = (1, 0, 0)
+I1223 15:16:28.046061    13 group.cpp:419] Trying to create path '/mesos' in ZooKeeper
+I1223 15:16:28.096115     9 contender.cpp:268] New candidate (id='0') has entered the contest for leadership
+I1223 15:16:29.052207     9 group.cpp:341] Group process (zookeeper-group(2)@172.19.10.16:5050) connected to ZooKeeper
+I1223 15:16:29.052268     9 group.cpp:831] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1223 15:16:29.052309     9 group.cpp:419] Trying to create path '/mesos' in ZooKeeper
+I1223 15:16:29.074273     9 detector.cpp:152] Detected a new leader: (id='0')
+I1223 15:16:29.074419     9 group.cpp:700] Trying to get '/mesos/json.info_0000000000' in ZooKeeper
+I1223 15:16:29.077235     9 zookeeper.cpp:262] A new leading master (UPID=master@172.19.10.16:5050) is detected
+I1223 15:16:29.077325     9 master.cpp:2113] Elected as the leading master!
+I1223 15:16:29.077446     9 master.cpp:1668] Recovering from registrar
+I1223 15:16:29.078351     9 registrar.cpp:383] Successfully fetched the registry (0B) in 816896ns
+I1223 15:16:29.078634     9 registrar.cpp:487] Applied 1 operations in 19723ns; attempting to update the registry
+I1223 15:16:29.079195     9 registrar.cpp:544] Successfully updated the registry in 488192ns
+I1223 15:16:29.079339     9 registrar.cpp:416] Successfully recovered registrar
+I1223 15:16:29.079491     9 master.cpp:1782] Recovered 0 agents from the registry (137B); allowing 10mins for agents to reregister
+I1223 15:16:34.915242    14 master.cpp:2884] Received SUBSCRIBE call for framework 'marathon' at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:16:34.915406    14 master.cpp:2965] Subscribing framework marathon with checkpointing enabled and capabilities [ PARTITION_AWARE, REGION_AWARE ]
+I1223 15:16:34.916270    14 master.cpp:9860] Adding framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723 with roles {  } suppressed
+I1223 15:16:34.916887    10 hierarchical.cpp:306] Added framework f648ed87-50ef-44ec-b0e8-063d65586344-0000
+I1223 15:16:39.809546    13 master.cpp:5950] Processing REVIVE call for framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:16:39.809870    13 hierarchical.cpp:1385] Revived offers for roles { * } of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000
+I1223 15:16:44.827853    10 master.cpp:5950] Processing REVIVE call for framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:16:44.828138    10 hierarchical.cpp:1385] Revived offers for roles { * } of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000
+I1223 15:16:49.848335     8 master.cpp:5950] Processing REVIVE call for framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:16:49.848500     8 hierarchical.cpp:1385] Revived offers for roles { * } of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000
+I1223 15:16:49.867745    14 master.cpp:8889] Performing implicit task state reconciliation for framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:16:49.888304    13 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:17:04.908720    11 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:17:19.928692    14 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:17:34.948604     9 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:17:49.968760     8 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:18:04.988628    13 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:18:20.008273    11 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:18:35.028849    12 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:18:50.048837     7 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:19:05.068334     9 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:19:20.088342    10 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:19:35.108278    11 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:19:50.128717    12 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:20:05.148509    14 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:20:20.168320     9 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:20:35.188937     8 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:20:50.208775    10 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:21:05.228420    11 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:21:20.248055    14 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:21:35.267765     9 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:21:50.288121     8 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:22:05.721674     7 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:22:20.745247    10 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:22:35.774580    11 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:22:50.795264    14 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:23:05.814602     9 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:23:20.833840     7 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:23:35.854856    13 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:23:50.873888    11 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:24:05.894767     8 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:24:20.914057     9 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:24:35.934852     7 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:24:50.954181    13 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:25:05.974490    11 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:25:20.995028    10 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:25:36.014502     8 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:25:51.034220     9 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:26:06.055836    13 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:26:21.075040    12 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:26:36.094108     9 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:26:50.260748    12 master.cpp:8889] Performing implicit task state reconciliation for framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:26:51.114754     9 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:27:06.135027    13 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:27:21.155139    12 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:27:36.174937     7 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:27:51.194674    10 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:28:06.214618     9 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:28:21.234736    11 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:28:36.254524    14 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:28:51.274624     8 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:29:06.295050    10 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:29:21.314816     9 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:29:36.334436    11 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:29:51.354960    14 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:29:52.147083    11 group.cpp:452] Lost connection to ZooKeeper, attempting to reconnect ...
+I1223 15:29:52.150753    12 group.cpp:452] Lost connection to ZooKeeper, attempting to reconnect ...
+I1223 15:29:52.341928     7 master.cpp:1396] Framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723 disconnected
+I1223 15:29:52.341986     7 master.cpp:3260] Deactivating framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:29:52.342051     7 master.cpp:3237] Disconnecting framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723
+I1223 15:29:52.342082     7 master.cpp:1411] Giving framework f648ed87-50ef-44ec-b0e8-063d65586344-0000 (marathon) at scheduler-b19f29f3-66f3-49b6-88aa-797909a0e593@172.19.10.20:33723 1weeks to failover
+I1223 15:29:52.342131    11 hierarchical.cpp:420] Deactivated framework f648ed87-50ef-44ec-b0e8-063d65586344-0000
+W1223 15:29:52.342176    15 process.cpp:1873] Failed to send 'mesos.internal.FrameworkErrorMessage' to '172.19.10.20:33723', connect: Failed to connect to 172.19.10.20:33723: Connection refused

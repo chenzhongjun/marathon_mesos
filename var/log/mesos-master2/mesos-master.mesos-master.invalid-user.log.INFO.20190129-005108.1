@@ -1,0 +1,65 @@
+Log file created at: 2019/01/29 00:51:08
+Running on machine: mesos-master
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0129 00:51:08.100996     1 logging.cpp:201] INFO level logging started!
+I0129 00:51:08.101603     1 main.cpp:242] Build: 2018-09-21 14:54:37 by ubuntu
+I0129 00:51:08.101641     1 main.cpp:243] Version: 1.7.0
+I0129 00:51:08.101663     1 main.cpp:246] Git tag: 1.7.0
+I0129 00:51:08.101678     1 main.cpp:250] Git SHA: 8419b870c571ac11825c883fa20ea3b7d4348d34
+I0129 00:51:08.103127     1 main.cpp:344] Using 'hierarchical' allocator
+I0129 00:51:08.104652     1 master.cpp:413] Master 1068304f-1297-4e73-9335-7bb3df9275ba (172.19.10.15) started on 172.19.10.15:5050
+I0129 00:51:08.104750     1 master.cpp:416] Flags at startup: --agent_ping_timeout="15secs" --agent_reregister_timeout="10mins" --allocation_interval="1secs" --allocator="hierarchical" --authenticate_agents="false" --authenticate_frameworks="false" --authenticate_http_frameworks="false" --authenticate_http_readonly="false" --authenticate_http_readwrite="false" --authentication_v0_timeout="15secs" --authenticators="crammd5" --authorizers="local" --filter_gpu_resources="true" --framework_sorter="drf" --help="false" --hostname="172.19.10.15" --hostname_lookup="true" --http_authenticators="basic" --initialize_driver_logging="true" --ip="172.19.10.15" --log_auto_initialize="true" --log_dir="/var/log/mesos" --logbufsecs="0" --logging_level="INFO" --max_agent_ping_timeouts="5" --max_completed_frameworks="50" --max_completed_tasks_per_framework="1000" --max_unreachable_tasks_per_framework="1000" --memory_profiling="false" --min_allocatable_resources="cpus:0.01|mem:32" --port="5050" --quiet="false" --quorum="2" --recovery_agent_removal_limit="100%" --registry="in_memory" --registry_fetch_timeout="1mins" --registry_gc_interval="15mins" --registry_max_agent_age="2weeks" --registry_max_agent_count="102400" --registry_store_timeout="20secs" --registry_strict="false" --require_agent_domain="false" --role_sorter="drf" --root_submissions="true" --version="false" --webui_dir="/usr/share/mesos/webui" --work_dir="/var/tmp/mesos" --zk="zk://172.19.10.11:2181,172.19.10.12:2181,172.19.10.13:2181/mesos" --zk_session_timeout="10secs"
+I0129 00:51:08.104986     1 master.cpp:467] Master allowing unauthenticated frameworks to register
+I0129 00:51:08.105010     1 master.cpp:473] Master allowing unauthenticated agents to register
+I0129 00:51:08.105024     1 master.cpp:480] Master allowing HTTP frameworks to register without authentication
+I0129 00:51:08.105046     1 master.cpp:521] Using default 'crammd5' authenticator
+W0129 00:51:08.105067     1 authenticator.cpp:513] No credentials provided, authentication requests will be refused
+I0129 00:51:08.105300     1 authenticator.cpp:520] Initializing server SASL
+I0129 00:51:08.117576    13 contender.cpp:152] Joining the ZK group
+I0129 00:51:08.117909     1 master.cpp:2047] Successfully attached file '/var/log/mesos/mesos-master.INFO'
+I0129 00:51:14.550210     8 group.cpp:341] Group process (zookeeper-group(1)@172.19.10.15:5050) connected to ZooKeeper
+I0129 00:51:14.550287     8 group.cpp:831] Syncing group operations: queue size (joins, cancels, datas) = (1, 0, 0)
+I0129 00:51:14.550313     8 group.cpp:419] Trying to create path '/mesos' in ZooKeeper
+I0129 00:51:14.592922    13 contender.cpp:268] New candidate (id='0') has entered the contest for leadership
+I0129 00:51:15.580042    11 group.cpp:341] Group process (zookeeper-group(2)@172.19.10.15:5050) connected to ZooKeeper
+I0129 00:51:15.580112    11 group.cpp:831] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I0129 00:51:15.580729    11 group.cpp:419] Trying to create path '/mesos' in ZooKeeper
+I0129 00:51:15.583879     8 detector.cpp:152] Detected a new leader: (id='0')
+I0129 00:51:15.584028    12 group.cpp:700] Trying to get '/mesos/json.info_0000000000' in ZooKeeper
+I0129 00:51:15.585391    11 zookeeper.cpp:262] A new leading master (UPID=master@172.19.10.15:5050) is detected
+I0129 00:51:15.585644    13 master.cpp:2113] Elected as the leading master!
+I0129 00:51:15.586355    13 master.cpp:1668] Recovering from registrar
+I0129 00:51:15.588141     9 registrar.cpp:383] Successfully fetched the registry (0B) in 1.472768ms
+I0129 00:51:15.588308     9 registrar.cpp:487] Applied 1 operations in 76092ns; attempting to update the registry
+I0129 00:51:15.588927     9 registrar.cpp:544] Successfully updated the registry in 570112ns
+I0129 00:51:15.588974     9 registrar.cpp:416] Successfully recovered registrar
+I0129 00:51:15.589119    11 master.cpp:1782] Recovered 0 agents from the registry (136B); allowing 10mins for agents to reregister
+I0129 00:51:17.323211    12 master.cpp:2884] Received SUBSCRIBE call for framework 'marathon' at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873
+I0129 00:51:17.323470    12 master.cpp:2965] Subscribing framework marathon with checkpointing enabled and capabilities [ PARTITION_AWARE, REGION_AWARE ]
+I0129 00:51:17.324280    12 master.cpp:9860] Adding framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873 with roles {  } suppressed
+I0129 00:51:17.325001    12 hierarchical.cpp:306] Added framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000
+I0129 00:51:22.170181     8 master.cpp:5950] Processing REVIVE call for framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873
+I0129 00:51:22.170397    11 hierarchical.cpp:1385] Revived offers for roles { * } of framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000
+I0129 00:51:27.188469     9 master.cpp:5950] Processing REVIVE call for framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873
+I0129 00:51:27.188694     9 hierarchical.cpp:1385] Revived offers for roles { * } of framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000
+I0129 00:51:32.209025     6 master.cpp:5950] Processing REVIVE call for framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873
+I0129 00:51:32.209220     6 hierarchical.cpp:1385] Revived offers for roles { * } of framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000
+I0129 00:51:32.262970     7 master.cpp:8889] Performing implicit task state reconciliation for framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873
+I0129 00:51:32.289830     9 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873
+I0129 00:51:47.308696     7 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873
+I0129 00:52:02.328506    11 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873
+I0129 00:52:17.349105    10 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873
+I0129 00:52:32.368521    12 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873
+I0129 00:52:47.388526     9 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873
+I0129 00:53:02.408571     8 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873
+I0129 00:53:17.428452    13 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873
+I0129 00:53:32.448352     7 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873
+I0129 00:53:47.469064    10 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873
+I0129 00:53:58.319445    10 group.cpp:452] Lost connection to ZooKeeper, attempting to reconnect ...
+I0129 00:53:58.359326     7 group.cpp:452] Lost connection to ZooKeeper, attempting to reconnect ...
+I0129 00:53:58.554839    10 master.cpp:1396] Framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873 disconnected
+I0129 00:53:58.554908    10 master.cpp:3260] Deactivating framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873
+I0129 00:53:58.554960    10 master.cpp:3237] Disconnecting framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873
+I0129 00:53:58.554994    10 master.cpp:1411] Giving framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000 (marathon) at scheduler-6fe0aaea-f497-4f50-9920-ce1aab2aa24c@172.19.10.20:33873 1weeks to failover
+I0129 00:53:58.555047     7 hierarchical.cpp:420] Deactivated framework 1068304f-1297-4e73-9335-7bb3df9275ba-0000
+W0129 00:53:58.555112    14 process.cpp:1873] Failed to send 'mesos.internal.FrameworkErrorMessage' to '172.19.10.20:33873', connect: Failed to connect to 172.19.10.20:33873: Connection reset by peer

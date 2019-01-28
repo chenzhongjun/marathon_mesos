@@ -1,0 +1,54 @@
+Log file created at: 2018/12/23 15:30:10
+Running on machine: mesos-master
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1223 15:30:10.058343     1 logging.cpp:201] INFO level logging started!
+I1223 15:30:10.060426     1 main.cpp:242] Build: 2018-09-21 14:54:37 by ubuntu
+I1223 15:30:10.060454     1 main.cpp:243] Version: 1.7.0
+I1223 15:30:10.060469     1 main.cpp:246] Git tag: 1.7.0
+I1223 15:30:10.060480     1 main.cpp:250] Git SHA: 8419b870c571ac11825c883fa20ea3b7d4348d34
+I1223 15:30:10.062471     1 main.cpp:344] Using 'hierarchical' allocator
+I1223 15:30:10.064308    14 master.cpp:413] Master d8541768-3117-4d8a-919a-e6b59832e537 (172.19.10.16) started on 172.19.10.16:5050
+I1223 15:30:10.064348    14 master.cpp:416] Flags at startup: --agent_ping_timeout="15secs" --agent_reregister_timeout="10mins" --allocation_interval="1secs" --allocator="hierarchical" --authenticate_agents="false" --authenticate_frameworks="false" --authenticate_http_frameworks="false" --authenticate_http_readonly="false" --authenticate_http_readwrite="false" --authentication_v0_timeout="15secs" --authenticators="crammd5" --authorizers="local" --filter_gpu_resources="true" --framework_sorter="drf" --help="false" --hostname="172.19.10.16" --hostname_lookup="true" --http_authenticators="basic" --initialize_driver_logging="true" --ip="172.19.10.16" --log_auto_initialize="true" --log_dir="/var/log/mesos" --logbufsecs="0" --logging_level="INFO" --max_agent_ping_timeouts="5" --max_completed_frameworks="50" --max_completed_tasks_per_framework="1000" --max_unreachable_tasks_per_framework="1000" --memory_profiling="false" --min_allocatable_resources="cpus:0.01|mem:32" --port="5050" --quiet="false" --quorum="2" --recovery_agent_removal_limit="100%" --registry="in_memory" --registry_fetch_timeout="1mins" --registry_gc_interval="15mins" --registry_max_agent_age="2weeks" --registry_max_agent_count="102400" --registry_store_timeout="20secs" --registry_strict="false" --require_agent_domain="false" --role_sorter="drf" --root_submissions="true" --version="false" --webui_dir="/usr/share/mesos/webui" --work_dir="/var/tmp/mesos" --zk="zk://172.19.10.11:2181,172.19.10.12:2181,172.19.10.13:2181/mesos" --zk_session_timeout="10secs"
+I1223 15:30:10.064541    14 master.cpp:467] Master allowing unauthenticated frameworks to register
+I1223 15:30:10.064558    14 master.cpp:473] Master allowing unauthenticated agents to register
+I1223 15:30:10.064565    14 master.cpp:480] Master allowing HTTP frameworks to register without authentication
+I1223 15:30:10.064589    14 master.cpp:521] Using default 'crammd5' authenticator
+W1223 15:30:10.064605    14 authenticator.cpp:513] No credentials provided, authentication requests will be refused
+I1223 15:30:10.064843    14 authenticator.cpp:520] Initializing server SASL
+I1223 15:30:10.096979    11 master.cpp:2047] Successfully attached file '/var/log/mesos/mesos-master.INFO'
+I1223 15:30:10.100950    13 contender.cpp:152] Joining the ZK group
+I1223 15:30:16.563061    13 group.cpp:341] Group process (zookeeper-group(1)@172.19.10.16:5050) connected to ZooKeeper
+I1223 15:30:16.563256    13 group.cpp:831] Syncing group operations: queue size (joins, cancels, datas) = (1, 0, 0)
+I1223 15:30:16.563426    13 group.cpp:419] Trying to create path '/mesos' in ZooKeeper
+I1223 15:30:16.597043    14 group.cpp:341] Group process (zookeeper-group(2)@172.19.10.16:5050) connected to ZooKeeper
+I1223 15:30:16.597111    14 group.cpp:831] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1223 15:30:16.597134    14 group.cpp:419] Trying to create path '/mesos' in ZooKeeper
+I1223 15:30:16.608597     8 detector.cpp:152] Detected a new leader: (id='0')
+I1223 15:30:16.608791     9 group.cpp:700] Trying to get '/mesos/json.info_0000000000' in ZooKeeper
+I1223 15:30:16.611507     8 zookeeper.cpp:262] A new leading master (UPID=master@172.19.10.14:5050) is detected
+I1223 15:30:16.611608     8 master.cpp:2126] The newly elected leader is master@172.19.10.14:5050 with id 97b8d546-5fbe-43a5-a4c6-7df20157e2a3
+I1223 15:30:16.659195     9 contender.cpp:268] New candidate (id='1') has entered the contest for leadership
+I1223 15:30:39.713726    11 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._0 from 192.168.3.32:52624 with User-Agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36'
+I1223 15:30:39.713899    11 http.cpp:2298] Redirecting request for /master/state?jsonp=angular.callbacks._0 to the leading master 172.19.10.14
+I1223 15:31:06.867177     9 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._4 from 192.168.3.32:52624 with User-Agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36'
+I1223 15:31:06.867322     9 http.cpp:2298] Redirecting request for /master/state?jsonp=angular.callbacks._4 to the leading master 172.19.10.14
+I1223 15:31:54.865079    13 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._e from 192.168.3.32:52622 with User-Agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36'
+I1223 15:31:54.865224    13 http.cpp:2298] Redirecting request for /master/state?jsonp=angular.callbacks._e to the leading master 172.19.10.14
+I1223 15:32:42.738885    12 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._t from 192.168.3.32:52624 with User-Agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36'
+I1223 15:32:42.739018    12 http.cpp:2298] Redirecting request for /master/state?jsonp=angular.callbacks._t to the leading master 172.19.10.14
+I1223 15:33:33.916625    12 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._1c from 192.168.3.32:52619 with User-Agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36'
+I1223 15:33:33.916798    12 http.cpp:2298] Redirecting request for /master/state?jsonp=angular.callbacks._1c to the leading master 172.19.10.14
+I1223 15:34:10.603251    12 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._1w from 192.168.3.32:52622 with User-Agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36'
+I1223 15:34:10.603402    12 http.cpp:2298] Redirecting request for /master/state?jsonp=angular.callbacks._1w to the leading master 172.19.10.14
+I1223 15:35:00.167455     9 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._2n from 192.168.3.32:52624 with User-Agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36'
+I1223 15:35:00.167613     9 http.cpp:2298] Redirecting request for /master/state?jsonp=angular.callbacks._2n to the leading master 172.19.10.14
+I1223 15:35:46.927940    14 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._3k from 192.168.3.32:53033 with User-Agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36'
+I1223 15:35:46.928076    14 http.cpp:2298] Redirecting request for /master/state?jsonp=angular.callbacks._3k to the leading master 172.19.10.14
+I1223 15:36:34.944206    10 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._4l from 192.168.3.32:53305 with User-Agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36'
+I1223 15:36:34.944350    10 http.cpp:2298] Redirecting request for /master/state?jsonp=angular.callbacks._4l to the leading master 172.19.10.14
+I1223 15:36:58.392624    11 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._55 from 192.168.3.32:53404 with User-Agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36'
+I1223 15:36:58.392796    11 http.cpp:2298] Redirecting request for /master/state?jsonp=angular.callbacks._55 to the leading master 172.19.10.14
+I1223 15:37:22.408118    10 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._5v from 192.168.3.32:53571 with User-Agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36'
+I1223 15:37:22.408289    10 http.cpp:2298] Redirecting request for /master/state?jsonp=angular.callbacks._5v to the leading master 172.19.10.14
+I1224 14:43:46.404497    10 group.cpp:452] Lost connection to ZooKeeper, attempting to reconnect ...
+I1224 14:43:46.404565    13 group.cpp:452] Lost connection to ZooKeeper, attempting to reconnect ...

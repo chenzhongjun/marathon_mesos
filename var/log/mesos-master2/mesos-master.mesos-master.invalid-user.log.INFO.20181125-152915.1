@@ -1,0 +1,32 @@
+Log file created at: 2018/11/25 15:29:15
+Running on machine: mesos-master
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1125 15:29:15.930783     1 logging.cpp:201] INFO level logging started!
+I1125 15:29:15.931347     1 main.cpp:242] Build: 2018-09-21 14:54:37 by ubuntu
+I1125 15:29:15.931371     1 main.cpp:243] Version: 1.7.0
+I1125 15:29:15.931386     1 main.cpp:246] Git tag: 1.7.0
+I1125 15:29:15.931398     1 main.cpp:250] Git SHA: 8419b870c571ac11825c883fa20ea3b7d4348d34
+I1125 15:29:15.932544     1 main.cpp:344] Using 'hierarchical' allocator
+I1125 15:29:15.937733     8 master.cpp:413] Master a4b8b5cb-31be-4cf5-97ac-7b107e8f8577 (172.19.10.15) started on 172.19.10.15:5050
+I1125 15:29:15.937778     8 master.cpp:416] Flags at startup: --agent_ping_timeout="15secs" --agent_reregister_timeout="10mins" --allocation_interval="1secs" --allocator="hierarchical" --authenticate_agents="false" --authenticate_frameworks="false" --authenticate_http_frameworks="false" --authenticate_http_readonly="false" --authenticate_http_readwrite="false" --authentication_v0_timeout="15secs" --authenticators="crammd5" --authorizers="local" --filter_gpu_resources="true" --framework_sorter="drf" --help="false" --hostname="172.19.10.15" --hostname_lookup="true" --http_authenticators="basic" --initialize_driver_logging="true" --ip="172.19.10.15" --log_auto_initialize="true" --log_dir="/var/log/mesos" --logbufsecs="0" --logging_level="INFO" --max_agent_ping_timeouts="5" --max_completed_frameworks="50" --max_completed_tasks_per_framework="1000" --max_unreachable_tasks_per_framework="1000" --memory_profiling="false" --min_allocatable_resources="cpus:0.01|mem:32" --port="5050" --quiet="false" --quorum="2" --recovery_agent_removal_limit="100%" --registry="in_memory" --registry_fetch_timeout="1mins" --registry_gc_interval="15mins" --registry_max_agent_age="2weeks" --registry_max_agent_count="102400" --registry_store_timeout="20secs" --registry_strict="false" --require_agent_domain="false" --role_sorter="drf" --root_submissions="true" --version="false" --webui_dir="/usr/share/mesos/webui" --work_dir="/var/tmp/mesos" --zk="zk://172.19.10.11:2181,172.19.10.12:2181,172.19.10.13:2181/mesos" --zk_session_timeout="10secs"
+I1125 15:29:15.937952     8 master.cpp:467] Master allowing unauthenticated frameworks to register
+I1125 15:29:15.937964     8 master.cpp:473] Master allowing unauthenticated agents to register
+I1125 15:29:15.937974     8 master.cpp:480] Master allowing HTTP frameworks to register without authentication
+I1125 15:29:15.937991     8 master.cpp:521] Using default 'crammd5' authenticator
+W1125 15:29:15.938006     8 authenticator.cpp:513] No credentials provided, authentication requests will be refused
+I1125 15:29:15.938184     8 authenticator.cpp:520] Initializing server SASL
+I1125 15:29:15.948352    15 contender.cpp:152] Joining the ZK group
+I1125 15:29:15.948413     8 master.cpp:2047] Successfully attached file '/var/log/mesos/mesos-master.INFO'
+I1125 15:29:22.399730    14 group.cpp:341] Group process (zookeeper-group(2)@172.19.10.15:5050) connected to ZooKeeper
+I1125 15:29:22.399832    14 group.cpp:831] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1125 15:29:22.399888    14 group.cpp:419] Trying to create path '/mesos' in ZooKeeper
+I1125 15:29:22.836468     9 detector.cpp:152] Detected a new leader: (id='0')
+I1125 15:29:22.860707     9 group.cpp:700] Trying to get '/mesos/json.info_0000000000' in ZooKeeper
+I1125 15:29:22.864284     9 zookeeper.cpp:262] A new leading master (UPID=master@172.19.10.14:5050) is detected
+I1125 15:29:22.864384     9 master.cpp:2126] The newly elected leader is master@172.19.10.14:5050 with id 297a142f-e717-428a-b26b-e95b27e150d4
+I1125 15:29:23.387198    10 group.cpp:341] Group process (zookeeper-group(1)@172.19.10.15:5050) connected to ZooKeeper
+I1125 15:29:23.387253    10 group.cpp:831] Syncing group operations: queue size (joins, cancels, datas) = (1, 0, 0)
+I1125 15:29:23.387274    10 group.cpp:419] Trying to create path '/mesos' in ZooKeeper
+I1125 15:29:23.425014     8 contender.cpp:268] New candidate (id='2') has entered the contest for leadership
+I1126 14:46:29.571283    14 group.cpp:452] Lost connection to ZooKeeper, attempting to reconnect ...
+I1126 14:46:29.571283    15 group.cpp:452] Lost connection to ZooKeeper, attempting to reconnect ...

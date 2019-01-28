@@ -1,0 +1,62 @@
+Log file created at: 2018/12/24 15:13:51
+Running on machine: mesos-master
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1224 15:13:51.143571     1 logging.cpp:201] INFO level logging started!
+I1224 15:13:51.144630     1 main.cpp:242] Build: 2018-09-21 14:54:37 by ubuntu
+I1224 15:13:51.144659     1 main.cpp:243] Version: 1.7.0
+I1224 15:13:51.144676     1 main.cpp:246] Git tag: 1.7.0
+I1224 15:13:51.144688     1 main.cpp:250] Git SHA: 8419b870c571ac11825c883fa20ea3b7d4348d34
+I1224 15:13:51.146193     1 main.cpp:344] Using 'hierarchical' allocator
+I1224 15:13:51.147574     1 master.cpp:413] Master d5c296e3-6607-4746-8597-b5fd0d8438ef (172.19.10.15) started on 172.19.10.15:5050
+I1224 15:13:51.147617     1 master.cpp:416] Flags at startup: --agent_ping_timeout="15secs" --agent_reregister_timeout="10mins" --allocation_interval="1secs" --allocator="hierarchical" --authenticate_agents="false" --authenticate_frameworks="false" --authenticate_http_frameworks="false" --authenticate_http_readonly="false" --authenticate_http_readwrite="false" --authentication_v0_timeout="15secs" --authenticators="crammd5" --authorizers="local" --filter_gpu_resources="true" --framework_sorter="drf" --help="false" --hostname="172.19.10.15" --hostname_lookup="true" --http_authenticators="basic" --initialize_driver_logging="true" --ip="172.19.10.15" --log_auto_initialize="true" --log_dir="/var/log/mesos" --logbufsecs="0" --logging_level="INFO" --max_agent_ping_timeouts="5" --max_completed_frameworks="50" --max_completed_tasks_per_framework="1000" --max_unreachable_tasks_per_framework="1000" --memory_profiling="false" --min_allocatable_resources="cpus:0.01|mem:32" --port="5050" --quiet="false" --quorum="2" --recovery_agent_removal_limit="100%" --registry="in_memory" --registry_fetch_timeout="1mins" --registry_gc_interval="15mins" --registry_max_agent_age="2weeks" --registry_max_agent_count="102400" --registry_store_timeout="20secs" --registry_strict="false" --require_agent_domain="false" --role_sorter="drf" --root_submissions="true" --version="false" --webui_dir="/usr/share/mesos/webui" --work_dir="/var/tmp/mesos" --zk="zk://172.19.10.11:2181,172.19.10.12:2181,172.19.10.13:2181/mesos" --zk_session_timeout="10secs"
+I1224 15:13:51.147816     1 master.cpp:467] Master allowing unauthenticated frameworks to register
+I1224 15:13:51.147835     1 master.cpp:473] Master allowing unauthenticated agents to register
+I1224 15:13:51.147846     1 master.cpp:480] Master allowing HTTP frameworks to register without authentication
+I1224 15:13:51.147866     1 master.cpp:521] Using default 'crammd5' authenticator
+W1224 15:13:51.147882     1 authenticator.cpp:513] No credentials provided, authentication requests will be refused
+I1224 15:13:51.148079     1 authenticator.cpp:520] Initializing server SASL
+I1224 15:13:51.155380    11 master.cpp:2047] Successfully attached file '/var/log/mesos/mesos-master.INFO'
+I1224 15:13:51.160425    15 contender.cpp:152] Joining the ZK group
+I1224 15:13:51.176625    13 group.cpp:341] Group process (zookeeper-group(2)@172.19.10.15:5050) connected to ZooKeeper
+I1224 15:13:51.176694    13 group.cpp:831] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I1224 15:13:51.176715    13 group.cpp:419] Trying to create path '/mesos' in ZooKeeper
+I1224 15:13:51.201251    10 group.cpp:341] Group process (zookeeper-group(1)@172.19.10.15:5050) connected to ZooKeeper
+I1224 15:13:51.201316    10 group.cpp:831] Syncing group operations: queue size (joins, cancels, datas) = (1, 0, 0)
+I1224 15:13:51.201330    10 group.cpp:419] Trying to create path '/mesos' in ZooKeeper
+I1224 15:13:51.236989    13 detector.cpp:152] Detected a new leader: (id='0')
+I1224 15:13:51.237452    13 contender.cpp:268] New candidate (id='0') has entered the contest for leadership
+I1224 15:13:51.241430    15 group.cpp:700] Trying to get '/mesos/json.info_0000000000' in ZooKeeper
+I1224 15:13:51.244323    15 zookeeper.cpp:262] A new leading master (UPID=master@172.19.10.15:5050) is detected
+I1224 15:13:51.244438    13 master.cpp:2113] Elected as the leading master!
+I1224 15:13:51.244488    13 master.cpp:1668] Recovering from registrar
+I1224 15:13:51.245410    13 registrar.cpp:383] Successfully fetched the registry (0B) in 836096ns
+I1224 15:13:51.245527    13 registrar.cpp:487] Applied 1 operations in 22403ns; attempting to update the registry
+I1224 15:13:51.245702    15 registrar.cpp:544] Successfully updated the registry in 144896ns
+I1224 15:13:51.245743    15 registrar.cpp:416] Successfully recovered registrar
+I1224 15:13:51.245872    15 master.cpp:1782] Recovered 0 agents from the registry (136B); allowing 10mins for agents to reregister
+I1224 15:13:54.399101    14 master.cpp:2884] Received SUBSCRIBE call for framework 'marathon' at scheduler-6e44afcb-569e-41cd-807f-a7dacd992e23@172.19.10.20:36695
+I1224 15:13:54.399282    14 master.cpp:2965] Subscribing framework marathon with checkpointing enabled and capabilities [ PARTITION_AWARE, REGION_AWARE ]
+I1224 15:13:54.399981    14 master.cpp:9860] Adding framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000 (marathon) at scheduler-6e44afcb-569e-41cd-807f-a7dacd992e23@172.19.10.20:36695 with roles {  } suppressed
+I1224 15:13:54.400884    13 hierarchical.cpp:306] Added framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000
+I1224 15:13:59.281834    15 master.cpp:5950] Processing REVIVE call for framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000 (marathon) at scheduler-6e44afcb-569e-41cd-807f-a7dacd992e23@172.19.10.20:36695
+I1224 15:13:59.282014    15 hierarchical.cpp:1385] Revived offers for roles { * } of framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000
+I1224 15:14:04.300712    11 master.cpp:5950] Processing REVIVE call for framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000 (marathon) at scheduler-6e44afcb-569e-41cd-807f-a7dacd992e23@172.19.10.20:36695
+I1224 15:14:04.301327    10 hierarchical.cpp:1385] Revived offers for roles { * } of framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000
+I1224 15:14:09.319936    10 master.cpp:5950] Processing REVIVE call for framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000 (marathon) at scheduler-6e44afcb-569e-41cd-807f-a7dacd992e23@172.19.10.20:36695
+I1224 15:14:09.320135    10 hierarchical.cpp:1385] Revived offers for roles { * } of framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000
+I1224 15:14:09.351361    13 master.cpp:8889] Performing implicit task state reconciliation for framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000 (marathon) at scheduler-6e44afcb-569e-41cd-807f-a7dacd992e23@172.19.10.20:36695
+I1224 15:14:09.360173     8 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000 (marathon) at scheduler-6e44afcb-569e-41cd-807f-a7dacd992e23@172.19.10.20:36695
+I1224 15:14:24.380637    13 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000 (marathon) at scheduler-6e44afcb-569e-41cd-807f-a7dacd992e23@172.19.10.20:36695
+I1224 15:14:39.400053    14 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000 (marathon) at scheduler-6e44afcb-569e-41cd-807f-a7dacd992e23@172.19.10.20:36695
+I1224 15:14:54.421005     9 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000 (marathon) at scheduler-6e44afcb-569e-41cd-807f-a7dacd992e23@172.19.10.20:36695
+I1224 15:15:09.440253    11 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000 (marathon) at scheduler-6e44afcb-569e-41cd-807f-a7dacd992e23@172.19.10.20:36695
+I1224 15:15:24.459658     8 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000 (marathon) at scheduler-6e44afcb-569e-41cd-807f-a7dacd992e23@172.19.10.20:36695
+I1224 15:15:39.479642    13 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000 (marathon) at scheduler-6e44afcb-569e-41cd-807f-a7dacd992e23@172.19.10.20:36695
+I1224 15:15:43.626686    12 group.cpp:452] Lost connection to ZooKeeper, attempting to reconnect ...
+I1224 15:15:43.626821    14 group.cpp:452] Lost connection to ZooKeeper, attempting to reconnect ...
+I1224 15:15:43.827738    14 master.cpp:1396] Framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000 (marathon) at scheduler-6e44afcb-569e-41cd-807f-a7dacd992e23@172.19.10.20:36695 disconnected
+W1224 15:15:43.827764    16 process.cpp:1873] Failed to send 'mesos.internal.FrameworkErrorMessage' to '172.19.10.20:36695', connect: Failed to connect to 172.19.10.20:36695: Connection refused
+I1224 15:15:43.827802    14 master.cpp:3260] Deactivating framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000 (marathon) at scheduler-6e44afcb-569e-41cd-807f-a7dacd992e23@172.19.10.20:36695
+I1224 15:15:43.828006    14 master.cpp:3237] Disconnecting framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000 (marathon) at scheduler-6e44afcb-569e-41cd-807f-a7dacd992e23@172.19.10.20:36695
+I1224 15:15:43.828040    14 master.cpp:1411] Giving framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000 (marathon) at scheduler-6e44afcb-569e-41cd-807f-a7dacd992e23@172.19.10.20:36695 1weeks to failover
+I1224 15:15:43.828016     8 hierarchical.cpp:420] Deactivated framework d5c296e3-6607-4746-8597-b5fd0d8438ef-0000

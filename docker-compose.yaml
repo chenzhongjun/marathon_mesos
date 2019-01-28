@@ -1,0 +1,231 @@
+version: "3"
+
+services:
+  zk1:
+    image: zookeeper:3.4
+    container_name: zk1
+    ports:
+      - "2181:2181"
+    environment:
+      ZOO_MY_ID: 1
+      ZOO_SERVERS: server.1=0.0.0.0:2888:3888 server.2=zk2:2888:3888 server.3=zk3:2888:3888
+    volumes:
+      - "/etc/localtime:/etc/localtime"
+    networks:
+      mesos_marathon:
+        ipv4_address: 172.19.10.11
+
+  zk2:
+    image: zookeeper:3.4
+    container_name: zk2
+    ports:
+      - "2182:2181"
+    environment:
+      ZOO_MY_ID: 2
+      ZOO_SERVERS: server.1=zk1:2888:3888 server.2=0.0.0.0:2888:3888 server.3=zk3:2888:3888
+    volumes:
+      -  "/etc/localtime:/etc/localtime"
+    networks:
+      mesos_marathon:
+        ipv4_address: 172.19.10.12
+
+  zk3:
+    image: zookeeper:3.4
+    container_name: zk3
+    ports:
+      - "2183:2181"
+    environment:
+      ZOO_MY_ID: 3
+      ZOO_SERVERS: server.1=zk1:2888:3888 server.2=zk2:2888:3888 server.3=0.0.0.0:2888:3888
+    volumes:
+      - "/etc/localtime:/etc/localtime"
+    networks:
+      mesos_marathon:
+        ipv4_address: 172.19.10.13
+
+  mesos-master1:
+    image: mesosphere/mesos-master:1.7.0
+    container_name: mesos-master1
+    hostname: mesos-master
+    ports:
+      - "5050:5050"
+    environment:
+      - MESOS_PORT=5050
+      - MESOS_REGISTRY=in_memory
+      - MESOS_ZK=zk://172.19.10.11:2181,172.19.10.12:2181,172.19.10.13:2181/mesos
+      - MESOS_HOSTNAME=172.19.10.14
+      - MESOS_IP=172.19.10.14
+      - MESOS_QUORUM=2
+      - MESOS_LOG_DIR=/var/log/mesos
+      - MESOS_WORK_DIR=/var/tmp/mesos
+    volumes:
+      - "./var/log/mesos-master1:/var/log/mesos"
+      - "./var/tmp/mesos1:/var/tmp/mesos"
+      - "/etc/localtime:/etc/localtime"
+    networks:
+      mesos_marathon:
+        ipv4_address: 172.19.10.14
+
+  mesos-master2:
+    image: mesosphere/mesos-master:1.7.0
+    container_name: mesos-master2
+    hostname: mesos-master
+    ports:
+      - "5051:5050"
+    environment:
+      - MESOS_PORT=5050
+      - MESOS_REGISTRY=in_memory
+      - MESOS_ZK=zk://172.19.10.11:2181,172.19.10.12:2181,172.19.10.13:2181/mesos
+      - MESOS_HOSTNAME=172.19.10.15
+      - MESOS_IP=172.19.10.15
+      - MESOS_QUORUM=2
+      - MESOS_LOG_DIR=/var/log/mesos
+      - MESOS_WORK_DIR=/var/tmp/mesos
+    volumes:
+      - "./var/log/mesos-master2:/var/log/mesos"
+      - "./var/tmp/mesos2:/var/tmp/mesos"
+      - "/etc/localtime:/etc/localtime"
+    networks:
+      mesos_marathon:
+        ipv4_address: 172.19.10.15
+
+  mesos-master3:
+    image: mesosphere/mesos-master:1.7.0
+    container_name: mesos-master3
+    hostname: mesos-master
+    ports:
+      - "5052:5050"
+    environment:
+      - MESOS_PORT=5050
+      - MESOS_REGISTRY=in_memory
+      - MESOS_ZK=zk://172.19.10.11:2181,172.19.10.12:2181,172.19.10.13:2181/mesos
+      - MESOS_HOSTNAME=172.19.10.16
+      - MESOS_IP=172.19.10.16
+      - MESOS_QUORUM=2
+      - MESOS_LOG_DIR=/var/log/mesos
+      - MESOS_WORK_DIR=/var/tmp/mesos
+    volumes:
+      - "./var/log/mesos-master3:/var/log/mesos"
+      - "./var/tmp/mesos3:/var/tmp/mesos"
+      - "/etc/localtime:/etc/localtime"
+    networks:
+      mesos_marathon:
+        ipv4_address: 172.19.10.16
+
+  mesos-slave1:
+    image: mesosphere/mesos-slave:1.7.0
+    container_name: mesos-slave1
+    hostname: mesos-slave
+    privileged: true
+    ports:
+      - "5060:5051"
+    environment:
+      - MESOS_HOSTNAME=172.19.10.17
+      - MESOS_IP=172.19.10.17
+      - MESOS_SWITCH_USER=0
+      - MESOS_MASTER=zk://172.19.10.11:2181,172.19.10.12:2181,172.19.10.13:2181/mesos
+      - MESOS_CONTAINERIZERS=docker,mesos
+      - MESOS_LOG_DIR=/var/log/mesos
+      - MESOS_WORK_DIR=/var/tmp/mesos
+      - MESOS_PORT=5051
+    volumes:
+      - "/var/log/mesos-slave1:/var/log/mesos"
+      - "/var/tmp/mesos-slave1:/var/tmp/mesos"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/sys/fs/cgroup/systemd/:/sys/fs/cgroup/systemd/"
+      - "/run/systemd/system:/run/systemd/system"
+      - "/usr/local/bin/docker:/usr/local/bin/docker"
+      - "/sys:/sys"
+      - "/cgroup:/cgroup"
+      - "/etc/localtime:/etc/localtime"
+    command: systemctl start mesos_executors.slice --no-systemd_enable_support
+    networks:
+      mesos_marathon:
+        ipv4_address: 172.19.10.17
+
+  mesos-slave2:
+    image: mesosphere/mesos-slave:1.6.1-rc2
+    container_name: mesos-slave2
+    hostname: mesos-slave
+    privileged: true
+    ports:
+      - "5061:5051"
+    environment:
+      - MESOS_HOSTNAME=172.19.10.18
+      - MESOS_IP=172.19.10.18
+      - MESOS_SWITCH_USER=0
+      - MESOS_MASTER=zk://172.19.10.11:2181,172.19.10.12:2181,172.19.10.13:2181/mesos
+      - MESOS_CONTAINERIZERS=docker,mesos
+      - MESOS_LOG_DIR=/var/log/mesos
+      - MESOS_WORK_DIR=/var/tmp/mesos
+      - MESOS_PORT=5051
+    volumes:
+      - "/var/log/mesos-slave2:/var/log/mesos"
+      - "/var/tmp/mesos-slave2:/var/tmp/mesos"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/run/systemd/system/:/run/systemd/system/"
+      - "/usr/local/bin/docker:/usr/local/bin/docker"
+      - "/sys:/sys"
+      - "/cgroup:/cgroup"
+      - "/etc/localtime:/etc/localtime"
+    command: systemctl start mesos_executors.slice --no-systemd_enable_support
+    networks:
+      mesos_marathon:
+        ipv4_address: 172.19.10.18
+
+  mesos-slave3:
+    image: mesosphere/mesos-slave:1.6.1-rc2
+    container_name: mesos-slave3
+    hostname: mesos-slave
+    privileged: true
+    ports:
+      - "5062:5051"
+    environment:
+      - MESOS_HOSTNAME=172.19.10.19
+      - MESOS_IP=172.19.10.19
+      - MESOS_SWITCH_USER=0
+      - MESOS_MASTER=zk://172.19.10.11:2181,172.19.10.12:2181,172.19.10.13:2181/mesos
+      - MESOS_CONTAINERIZERS=docker,mesos
+      - MESOS_LOG_DIR=/var/log/mesos
+      - MESOS_WORK_DIR=/var/tmp/mesos
+      - MESOS_PORT=5051
+    volumes:
+      - "/var/log/mesos-slave3:/var/log/mesos"
+      - "/var/tmp/mesos-slave3:/var/tmp/mesos"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/run/systemd/system/:/run/systemd/system/"
+      - "/usr/local/bin/docker:/usr/local/bin/docker"
+      - "/sys:/sys"
+      - "/cgroup:/cgroup"
+      - "/etc/localtime:/etc/localtime"
+    command: systemctl start mesos_executors.slice --no-systemd_enable_support
+    networks:
+      mesos_marathon:
+        ipv4_address: 172.19.10.19
+
+  marathon:
+    image: mesosphere/marathon:v1.7.181
+    container_name: marathon
+    hostname: marathon
+    ports:
+      - "9090:8080"
+    environment:
+      - MARATHON_HOSTNAME=172.19.10.20
+      - MARATHON_HTTPS_ADDRESS=172.19.10.20
+      - MARATHON_HTTP_ADDRESS=172.19.10.20
+      - MARATHON_MASTER=zk://172.19.10.11:2181,172.19.10.12:2181,172.19.10.13:2181/mesos
+      - MARATHON_ZK=zk://172.19.10.11:2181,172.19.10.12:2181,172.19.10.13:2181/marathon
+    volumes:
+      - "/etc/localtime:/etc/localtime"
+    networks:
+      mesos_marathon:
+        ipv4_address: 172.19.10.20
+
+    
+networks:
+  mesos_marathon:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.19.0.0/16
+

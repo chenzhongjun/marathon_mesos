@@ -1,0 +1,391 @@
+Log file created at: 2018/12/24 14:59:39
+Running on machine: a914ed173033
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1224 14:59:39.154345     1 logging.cpp:203] INFO level logging started!
+I1224 14:59:39.158004     1 main.cpp:248] Build: 2018-07-12 00:59:22 by ubuntu
+I1224 14:59:39.158025     1 main.cpp:249] Version: 1.6.1
+I1224 14:59:39.158035     1 main.cpp:252] Git tag: 1.6.1-rc2
+I1224 14:59:39.158041     1 main.cpp:256] Git SHA: ae82dd5cc6f415916702897acfd3085b6387b118
+I1224 14:59:39.169697     1 main.cpp:350] Using 'hierarchical' allocator
+I1224 14:59:39.176165     8 master.cpp:463] Master 8c2b9df0-1715-4efc-8231-e6a87929f220 (a914ed173033) started on 172.17.0.4:5050
+I1224 14:59:39.176211     8 master.cpp:466] Flags at startup: --agent_ping_timeout="15secs" --agent_reregister_timeout="10mins" --allocation_interval="1secs" --allocator="hierarchical" --authenticate_agents="false" --authenticate_frameworks="false" --authenticate_http_frameworks="false" --authenticate_http_readonly="false" --authenticate_http_readwrite="false" --authenticators="crammd5" --authorizers="local" --filter_gpu_resources="true" --framework_sorter="drf" --help="false" --hostname_lookup="true" --http_authenticators="basic" --initialize_driver_logging="true" --log_auto_initialize="true" --log_dir="/var/log/mesos" --logbufsecs="0" --logging_level="INFO" --max_agent_ping_timeouts="5" --max_completed_frameworks="50" --max_completed_tasks_per_framework="1000" --max_unreachable_tasks_per_framework="1000" --memory_profiling="false" --min_allocatable_resources="cpus:0.01|mem:32" --port="5050" --quiet="false" --quorum="1" --recovery_agent_removal_limit="100%" --registry="in_memory" --registry_fetch_timeout="1mins" --registry_gc_interval="15mins" --registry_max_agent_age="2weeks" --registry_max_agent_count="102400" --registry_store_timeout="20secs" --registry_strict="false" --require_agent_domain="false" --role_sorter="drf" --root_submissions="true" --version="false" --webui_dir="/usr/share/mesos/webui" --work_dir="/var/tmp/mesos" --zk="zk://127.0.0.1:2181/mesos" --zk_session_timeout="10secs"
+I1224 14:59:39.176390     8 master.cpp:517] Master allowing unauthenticated frameworks to register
+I1224 14:59:39.176403     8 master.cpp:523] Master allowing unauthenticated agents to register
+I1224 14:59:39.176415     8 master.cpp:530] Master allowing HTTP frameworks to register without authentication
+I1224 14:59:39.176869     8 master.cpp:571] Using default 'crammd5' authenticator
+W1224 14:59:39.176892     8 authenticator.cpp:513] No credentials provided, authentication requests will be refused
+I1224 14:59:39.177080     8 authenticator.cpp:520] Initializing server SASL
+I1224 14:59:39.188756    11 master.cpp:2096] Successfully attached file '/var/log/mesos/mesos-master.INFO'
+I1224 14:59:39.192677    10 contender.cpp:152] Joining the ZK group
+W1224 14:59:49.176970    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 14:59:49.177201    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 14:59:49.177269    15 group.cpp:511] ZooKeeper session expired
+I1224 14:59:49.177672    14 group.cpp:511] ZooKeeper session expired
+W1224 14:59:59.179790    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 14:59:59.179862    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 14:59:59.180541    11 group.cpp:511] ZooKeeper session expired
+I1224 14:59:59.180910    12 group.cpp:511] ZooKeeper session expired
+W1224 15:00:09.183282    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:00:09.183267    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:00:09.184128    12 group.cpp:511] ZooKeeper session expired
+I1224 15:00:09.184224    10 group.cpp:511] ZooKeeper session expired
+W1224 15:00:19.186558    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:00:19.186575    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:00:19.187336    10 group.cpp:511] ZooKeeper session expired
+I1224 15:00:19.187364    11 group.cpp:511] ZooKeeper session expired
+W1224 15:00:29.190613    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:00:29.190654     8 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:00:29.191421    13 group.cpp:511] ZooKeeper session expired
+I1224 15:00:29.191455     8 group.cpp:511] ZooKeeper session expired
+W1224 15:00:39.194908     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:00:39.195524    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:00:39.195755     9 group.cpp:511] ZooKeeper session expired
+I1224 15:00:39.195837    11 group.cpp:511] ZooKeeper session expired
+W1224 15:00:49.197646    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:00:49.197646    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:00:49.198388    11 group.cpp:511] ZooKeeper session expired
+I1224 15:00:49.199328    13 group.cpp:511] ZooKeeper session expired
+W1224 15:00:59.201865    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:00:59.201865    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:00:59.202162    10 group.cpp:511] ZooKeeper session expired
+I1224 15:00:59.202246    14 group.cpp:511] ZooKeeper session expired
+W1224 15:01:09.204380    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:01:09.204427    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:01:09.204902    12 group.cpp:511] ZooKeeper session expired
+I1224 15:01:09.205488    14 group.cpp:511] ZooKeeper session expired
+W1224 15:01:19.207983    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:01:19.207973    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:01:19.208467    14 group.cpp:511] ZooKeeper session expired
+I1224 15:01:19.208730    11 group.cpp:511] ZooKeeper session expired
+W1224 15:01:29.211691    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:01:29.211678     8 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:01:29.212149    10 group.cpp:511] ZooKeeper session expired
+I1224 15:01:29.212225     8 group.cpp:511] ZooKeeper session expired
+W1224 15:01:39.214924    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:01:39.214957     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:01:39.215632    14 group.cpp:511] ZooKeeper session expired
+I1224 15:01:39.215898     9 group.cpp:511] ZooKeeper session expired
+W1224 15:01:49.219096    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:01:49.219173    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:01:49.219888    14 group.cpp:511] ZooKeeper session expired
+I1224 15:01:49.219888    15 group.cpp:511] ZooKeeper session expired
+W1224 15:01:59.222594    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:01:59.222594    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:01:59.223343    12 group.cpp:511] ZooKeeper session expired
+I1224 15:01:59.223929    15 group.cpp:511] ZooKeeper session expired
+W1224 15:02:09.226315    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:02:09.226312    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:02:09.227098    13 group.cpp:511] ZooKeeper session expired
+I1224 15:02:09.227176    15 group.cpp:511] ZooKeeper session expired
+W1224 15:02:19.230549    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:02:19.230548    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:02:19.231158    14 group.cpp:511] ZooKeeper session expired
+I1224 15:02:19.231214    15 group.cpp:511] ZooKeeper session expired
+W1224 15:02:29.234788    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:02:29.234788     8 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:02:29.235437     8 group.cpp:511] ZooKeeper session expired
+I1224 15:02:29.235492    14 group.cpp:511] ZooKeeper session expired
+W1224 15:02:39.238893     8 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:02:39.239078    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:02:39.239817     8 group.cpp:511] ZooKeeper session expired
+I1224 15:02:39.240355    12 group.cpp:511] ZooKeeper session expired
+W1224 15:02:49.242120    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:02:49.242135     8 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:02:49.242959     8 group.cpp:511] ZooKeeper session expired
+I1224 15:02:49.242991    10 group.cpp:511] ZooKeeper session expired
+W1224 15:02:59.245615     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:02:59.245615    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:02:59.246306     9 group.cpp:511] ZooKeeper session expired
+I1224 15:02:59.246695    11 group.cpp:511] ZooKeeper session expired
+W1224 15:03:09.249123     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:03:09.249135    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:03:09.249678     9 group.cpp:511] ZooKeeper session expired
+I1224 15:03:09.250748    12 group.cpp:511] ZooKeeper session expired
+W1224 15:03:19.252943    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:03:19.252943    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:03:19.253715    12 group.cpp:511] ZooKeeper session expired
+I1224 15:03:19.254237    11 group.cpp:511] ZooKeeper session expired
+W1224 15:03:29.256464    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:03:29.256459    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:03:29.257156    11 group.cpp:511] ZooKeeper session expired
+I1224 15:03:29.257339    14 group.cpp:511] ZooKeeper session expired
+W1224 15:03:39.260124    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:03:39.260164    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:03:39.260706    15 group.cpp:511] ZooKeeper session expired
+I1224 15:03:39.260780    13 group.cpp:511] ZooKeeper session expired
+W1224 15:03:49.263612    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:03:49.263794    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:03:49.264446    10 group.cpp:511] ZooKeeper session expired
+I1224 15:03:49.264544    14 group.cpp:511] ZooKeeper session expired
+W1224 15:03:59.267951    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:03:59.267956     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:03:59.268460    14 group.cpp:511] ZooKeeper session expired
+I1224 15:03:59.269053     9 group.cpp:511] ZooKeeper session expired
+W1224 15:04:09.271394    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:04:09.271430    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:04:09.272099    12 group.cpp:511] ZooKeeper session expired
+I1224 15:04:09.273015    11 group.cpp:511] ZooKeeper session expired
+W1224 15:04:19.275481    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:04:19.275513     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:04:19.276242    12 group.cpp:511] ZooKeeper session expired
+I1224 15:04:19.276309     9 group.cpp:511] ZooKeeper session expired
+W1224 15:04:29.278358    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:04:29.278355     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:04:29.279047    11 group.cpp:511] ZooKeeper session expired
+I1224 15:04:29.279723     9 group.cpp:511] ZooKeeper session expired
+W1224 15:04:39.282456    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:04:39.282486     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:04:39.283037    11 group.cpp:511] ZooKeeper session expired
+I1224 15:04:39.283290     9 group.cpp:511] ZooKeeper session expired
+W1224 15:04:49.285850     8 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:04:49.285882    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:04:49.286288    13 group.cpp:511] ZooKeeper session expired
+I1224 15:04:49.286345     8 group.cpp:511] ZooKeeper session expired
+W1224 15:04:59.288786     8 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:04:59.288797    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:04:59.289525    12 group.cpp:511] ZooKeeper session expired
+I1224 15:04:59.289549     8 group.cpp:511] ZooKeeper session expired
+W1224 15:05:09.291705    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:05:09.292760     8 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:05:09.293015     8 group.cpp:511] ZooKeeper session expired
+I1224 15:05:09.293244    13 group.cpp:511] ZooKeeper session expired
+W1224 15:05:19.295596    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:05:19.295596     8 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:05:19.295944    13 group.cpp:511] ZooKeeper session expired
+I1224 15:05:19.295977     8 group.cpp:511] ZooKeeper session expired
+W1224 15:05:29.298034     8 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:05:29.298034    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:05:29.298203     8 group.cpp:511] ZooKeeper session expired
+I1224 15:05:29.298282    13 group.cpp:511] ZooKeeper session expired
+W1224 15:05:39.299887    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:05:39.299906     8 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:05:39.300654     8 group.cpp:511] ZooKeeper session expired
+I1224 15:05:39.300705    11 group.cpp:511] ZooKeeper session expired
+W1224 15:05:49.303668    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:05:49.303670     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:05:49.304167    11 group.cpp:511] ZooKeeper session expired
+I1224 15:05:49.304353     9 group.cpp:511] ZooKeeper session expired
+W1224 15:05:59.307358    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:05:59.307363    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:05:59.308207    12 group.cpp:511] ZooKeeper session expired
+I1224 15:05:59.308305    15 group.cpp:511] ZooKeeper session expired
+W1224 15:06:09.311311    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:06:09.311311    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:06:09.312178    14 group.cpp:511] ZooKeeper session expired
+I1224 15:06:09.312178    15 group.cpp:511] ZooKeeper session expired
+W1224 15:06:19.314676    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:06:19.314672    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:06:19.315490    13 group.cpp:511] ZooKeeper session expired
+I1224 15:06:19.315930    15 group.cpp:511] ZooKeeper session expired
+W1224 15:06:29.318075    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:06:29.318075    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:06:29.318411    11 group.cpp:511] ZooKeeper session expired
+I1224 15:06:29.318418    13 group.cpp:511] ZooKeeper session expired
+W1224 15:06:39.320469     8 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+W1224 15:06:39.320482    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:06:39.320711     8 group.cpp:511] ZooKeeper session expired
+I1224 15:06:39.320762    14 group.cpp:511] ZooKeeper session expired
+W1224 15:06:49.322747    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:06:49.322870    10 group.cpp:511] ZooKeeper session expired
+W1224 15:06:49.322978    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:06:49.323083    15 group.cpp:511] ZooKeeper session expired
+W1224 15:06:59.323909    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:06:59.324146    10 group.cpp:511] ZooKeeper session expired
+W1224 15:06:59.325019     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:06:59.325302     9 group.cpp:511] ZooKeeper session expired
+W1224 15:07:09.325950     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:07:09.326268     9 group.cpp:511] ZooKeeper session expired
+W1224 15:07:09.334002    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:07:09.334215    11 group.cpp:511] ZooKeeper session expired
+W1224 15:07:19.328052    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:07:19.328521    12 group.cpp:511] ZooKeeper session expired
+W1224 15:07:19.336331    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:07:19.336623    10 group.cpp:511] ZooKeeper session expired
+W1224 15:07:29.331485    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:07:29.331837    15 group.cpp:511] ZooKeeper session expired
+W1224 15:07:29.338517    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:07:29.338817    11 group.cpp:511] ZooKeeper session expired
+W1224 15:07:39.333693    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:07:39.334312    15 group.cpp:511] ZooKeeper session expired
+W1224 15:07:39.340750     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:07:39.341164     9 group.cpp:511] ZooKeeper session expired
+W1224 15:07:49.337026    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:07:49.337684    14 group.cpp:511] ZooKeeper session expired
+W1224 15:07:49.343127    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:07:49.343315    15 group.cpp:511] ZooKeeper session expired
+W1224 15:07:59.339838     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:07:59.340299     9 group.cpp:511] ZooKeeper session expired
+W1224 15:07:59.344811    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:07:59.345060    15 group.cpp:511] ZooKeeper session expired
+W1224 15:08:09.342825    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:08:09.343003    14 group.cpp:511] ZooKeeper session expired
+W1224 15:08:09.349658    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:08:09.349822    12 group.cpp:511] ZooKeeper session expired
+W1224 15:08:19.346747    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:08:19.346933    13 group.cpp:511] ZooKeeper session expired
+W1224 15:08:19.381937    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:08:19.382231    14 group.cpp:511] ZooKeeper session expired
+W1224 15:08:29.349762    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:08:29.350239    14 group.cpp:511] ZooKeeper session expired
+W1224 15:08:29.385929    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:08:29.386471    15 group.cpp:511] ZooKeeper session expired
+W1224 15:08:39.352746    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:08:39.353236    15 group.cpp:511] ZooKeeper session expired
+W1224 15:08:39.389189    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:08:39.389729    13 group.cpp:511] ZooKeeper session expired
+W1224 15:08:49.355389    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:08:49.355867    10 group.cpp:511] ZooKeeper session expired
+W1224 15:08:49.391644     8 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:08:49.392043     8 group.cpp:511] ZooKeeper session expired
+W1224 15:08:59.358055    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:08:59.358556    15 group.cpp:511] ZooKeeper session expired
+W1224 15:08:59.394280    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:08:59.394719    11 group.cpp:511] ZooKeeper session expired
+W1224 15:09:09.361059    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:09:09.361543    11 group.cpp:511] ZooKeeper session expired
+W1224 15:09:09.397338    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:09:09.397804    15 group.cpp:511] ZooKeeper session expired
+W1224 15:09:19.363464     8 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:09:19.363925     8 group.cpp:511] ZooKeeper session expired
+W1224 15:09:19.400756    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:09:19.401247    12 group.cpp:511] ZooKeeper session expired
+W1224 15:09:29.366217     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:09:29.366945     9 group.cpp:511] ZooKeeper session expired
+W1224 15:09:29.403353    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:09:29.403586    10 group.cpp:511] ZooKeeper session expired
+W1224 15:09:39.369027    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:09:39.369546    10 group.cpp:511] ZooKeeper session expired
+W1224 15:09:39.405421     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:09:39.405830     9 group.cpp:511] ZooKeeper session expired
+W1224 15:09:49.372575     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:09:49.373149     9 group.cpp:511] ZooKeeper session expired
+W1224 15:09:49.408664    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:09:49.409020    15 group.cpp:511] ZooKeeper session expired
+W1224 15:09:59.375648     8 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:09:59.376102     8 group.cpp:511] ZooKeeper session expired
+W1224 15:09:59.410876    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:09:59.411265    10 group.cpp:511] ZooKeeper session expired
+W1224 15:10:09.378631    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:10:09.379355    10 group.cpp:511] ZooKeeper session expired
+W1224 15:10:09.413863    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:10:09.414330    13 group.cpp:511] ZooKeeper session expired
+W1224 15:10:19.381901    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:10:19.384523    13 group.cpp:511] ZooKeeper session expired
+W1224 15:10:19.422040    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:10:19.422494    11 group.cpp:511] ZooKeeper session expired
+W1224 15:10:29.386837    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:10:29.387508    11 group.cpp:511] ZooKeeper session expired
+W1224 15:10:29.425195    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:10:29.425678    13 group.cpp:511] ZooKeeper session expired
+W1224 15:10:39.389897     8 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:10:39.390074     8 group.cpp:511] ZooKeeper session expired
+W1224 15:10:39.428043    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:10:39.428191    12 group.cpp:511] ZooKeeper session expired
+W1224 15:10:49.391696    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:10:49.392279    12 group.cpp:511] ZooKeeper session expired
+W1224 15:10:49.429854    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:10:49.430277    11 group.cpp:511] ZooKeeper session expired
+W1224 15:10:59.394687    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:10:59.395241    13 group.cpp:511] ZooKeeper session expired
+W1224 15:10:59.433146    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:10:59.433632    12 group.cpp:511] ZooKeeper session expired
+W1224 15:11:09.397995    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:11:09.398737    12 group.cpp:511] ZooKeeper session expired
+W1224 15:11:09.436250    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:11:09.436712    15 group.cpp:511] ZooKeeper session expired
+W1224 15:11:19.400441    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:11:19.400593    11 group.cpp:511] ZooKeeper session expired
+W1224 15:11:19.438730    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:11:19.438866    12 group.cpp:511] ZooKeeper session expired
+W1224 15:11:29.402407    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:11:29.403090    13 group.cpp:511] ZooKeeper session expired
+W1224 15:11:29.439852     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:11:29.440307     9 group.cpp:511] ZooKeeper session expired
+W1224 15:11:39.405514     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:11:39.406175     9 group.cpp:511] ZooKeeper session expired
+W1224 15:11:39.442723    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:11:39.443390    12 group.cpp:511] ZooKeeper session expired
+W1224 15:11:49.408085    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:11:49.408562    12 group.cpp:511] ZooKeeper session expired
+W1224 15:11:49.445304    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:11:49.445776    10 group.cpp:511] ZooKeeper session expired
+W1224 15:11:59.411447    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:11:59.411901    12 group.cpp:511] ZooKeeper session expired
+W1224 15:11:59.448952     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:11:59.449460     9 group.cpp:511] ZooKeeper session expired
+W1224 15:12:09.414091     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:12:09.414595     9 group.cpp:511] ZooKeeper session expired
+W1224 15:12:09.452267    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:12:09.452726    12 group.cpp:511] ZooKeeper session expired
+W1224 15:12:19.417482    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:12:19.417938    12 group.cpp:511] ZooKeeper session expired
+W1224 15:12:19.455757    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:12:19.456226    10 group.cpp:511] ZooKeeper session expired
+W1224 15:12:29.420351    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:12:29.421159    10 group.cpp:511] ZooKeeper session expired
+W1224 15:12:29.458577    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:12:29.459002    15 group.cpp:511] ZooKeeper session expired
+W1224 15:12:39.423053    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:12:39.423317    10 group.cpp:511] ZooKeeper session expired
+W1224 15:12:39.461222    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:12:39.461397    11 group.cpp:511] ZooKeeper session expired
+W1224 15:12:49.425150    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:12:49.425783    12 group.cpp:511] ZooKeeper session expired
+W1224 15:12:49.463599    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:12:49.464177    13 group.cpp:511] ZooKeeper session expired
+W1224 15:12:59.428272    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:12:59.428467    14 group.cpp:511] ZooKeeper session expired
+W1224 15:12:59.466356    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:12:59.466920    10 group.cpp:511] ZooKeeper session expired
+W1224 15:13:09.430384    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:13:09.430675    10 group.cpp:511] ZooKeeper session expired
+W1224 15:13:09.469674    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:13:09.470086    12 group.cpp:511] ZooKeeper session expired
+W1224 15:13:19.432327    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:13:19.433022    12 group.cpp:511] ZooKeeper session expired
+W1224 15:13:19.472800     8 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:13:19.473309     8 group.cpp:511] ZooKeeper session expired
+W1224 15:13:29.435825     8 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:13:29.436441     8 group.cpp:511] ZooKeeper session expired
+W1224 15:13:29.476080    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:13:29.476500    15 group.cpp:511] ZooKeeper session expired
+W1224 15:13:39.441691    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:13:39.442175    12 group.cpp:511] ZooKeeper session expired
+W1224 15:13:39.478955    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:13:39.479254    15 group.cpp:511] ZooKeeper session expired
+W1224 15:13:49.444419    14 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:13:49.444538    14 group.cpp:511] ZooKeeper session expired
+W1224 15:13:49.480720    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:13:49.480995    15 group.cpp:511] ZooKeeper session expired
+W1224 15:13:59.446290    10 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:13:59.446921    10 group.cpp:511] ZooKeeper session expired
+W1224 15:13:59.482528    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:13:59.483212    15 group.cpp:511] ZooKeeper session expired
+W1224 15:14:09.449772    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:14:09.450237    15 group.cpp:511] ZooKeeper session expired
+W1224 15:14:09.484921    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:14:09.485204    12 group.cpp:511] ZooKeeper session expired
+W1224 15:14:19.452612     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:14:19.453049     9 group.cpp:511] ZooKeeper session expired
+W1224 15:14:19.486825    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:14:19.487166    12 group.cpp:511] ZooKeeper session expired
+W1224 15:14:29.455206    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:14:29.455636    12 group.cpp:511] ZooKeeper session expired
+W1224 15:14:29.489336    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:14:29.489890    13 group.cpp:511] ZooKeeper session expired
+W1224 15:14:39.457679    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:14:39.458150    13 group.cpp:511] ZooKeeper session expired
+W1224 15:14:39.492137    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:14:39.492599    12 group.cpp:511] ZooKeeper session expired
+W1224 15:14:49.460338    11 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:14:49.460764    11 group.cpp:511] ZooKeeper session expired
+W1224 15:14:49.495605    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:14:49.496191    13 group.cpp:511] ZooKeeper session expired
+W1224 15:14:59.464074    13 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:14:59.464574    13 group.cpp:511] ZooKeeper session expired
+W1224 15:14:59.499332     9 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:14:59.499814     9 group.cpp:511] ZooKeeper session expired
+W1224 15:15:09.467589    15 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:15:09.468008    15 group.cpp:511] ZooKeeper session expired
+W1224 15:15:09.502662    12 group.cpp:495] Timed out waiting to connect to ZooKeeper. Forcing ZooKeeper session (sessionId=0) expiration
+I1224 15:15:09.502995    12 group.cpp:511] ZooKeeper session expired

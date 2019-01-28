@@ -1,0 +1,179 @@
+Log file created at: 2019/01/29 01:06:41
+Running on machine: mesos-master
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0129 01:06:41.980284     1 logging.cpp:201] INFO level logging started!
+I0129 01:06:41.981442     1 main.cpp:242] Build: 2018-09-21 14:54:37 by ubuntu
+I0129 01:06:41.981482     1 main.cpp:243] Version: 1.7.0
+I0129 01:06:41.981501     1 main.cpp:246] Git tag: 1.7.0
+I0129 01:06:41.981518     1 main.cpp:250] Git SHA: 8419b870c571ac11825c883fa20ea3b7d4348d34
+I0129 01:06:41.983063     1 main.cpp:344] Using 'hierarchical' allocator
+I0129 01:06:41.986191     1 master.cpp:413] Master 42c86315-f266-4afb-9d4c-93d145affdd7 (172.19.10.15) started on 172.19.10.15:5050
+I0129 01:06:41.986235     1 master.cpp:416] Flags at startup: --agent_ping_timeout="15secs" --agent_reregister_timeout="10mins" --allocation_interval="1secs" --allocator="hierarchical" --authenticate_agents="false" --authenticate_frameworks="false" --authenticate_http_frameworks="false" --authenticate_http_readonly="false" --authenticate_http_readwrite="false" --authentication_v0_timeout="15secs" --authenticators="crammd5" --authorizers="local" --filter_gpu_resources="true" --framework_sorter="drf" --help="false" --hostname="172.19.10.15" --hostname_lookup="true" --http_authenticators="basic" --initialize_driver_logging="true" --ip="172.19.10.15" --log_auto_initialize="true" --log_dir="/var/log/mesos" --logbufsecs="0" --logging_level="INFO" --max_agent_ping_timeouts="5" --max_completed_frameworks="50" --max_completed_tasks_per_framework="1000" --max_unreachable_tasks_per_framework="1000" --memory_profiling="false" --min_allocatable_resources="cpus:0.01|mem:32" --port="5050" --quiet="false" --quorum="2" --recovery_agent_removal_limit="100%" --registry="in_memory" --registry_fetch_timeout="1mins" --registry_gc_interval="15mins" --registry_max_agent_age="2weeks" --registry_max_agent_count="102400" --registry_store_timeout="20secs" --registry_strict="false" --require_agent_domain="false" --role_sorter="drf" --root_submissions="true" --version="false" --webui_dir="/usr/share/mesos/webui" --work_dir="/var/tmp/mesos" --zk="zk://172.19.10.11:2181,172.19.10.12:2181,172.19.10.13:2181/mesos" --zk_session_timeout="10secs"
+I0129 01:06:41.986435     1 master.cpp:467] Master allowing unauthenticated frameworks to register
+I0129 01:06:41.986456     1 master.cpp:473] Master allowing unauthenticated agents to register
+I0129 01:06:41.986470     1 master.cpp:480] Master allowing HTTP frameworks to register without authentication
+I0129 01:06:41.986495     1 master.cpp:521] Using default 'crammd5' authenticator
+W0129 01:06:41.986516     1 authenticator.cpp:513] No credentials provided, authentication requests will be refused
+I0129 01:06:41.986732     1 authenticator.cpp:520] Initializing server SASL
+I0129 01:06:41.992444     1 master.cpp:2047] Successfully attached file '/var/log/mesos/mesos-master.INFO'
+I0129 01:06:41.998463     8 contender.cpp:152] Joining the ZK group
+I0129 01:06:42.014031     9 group.cpp:341] Group process (zookeeper-group(1)@172.19.10.15:5050) connected to ZooKeeper
+I0129 01:06:42.014134     9 group.cpp:831] Syncing group operations: queue size (joins, cancels, datas) = (1, 0, 0)
+I0129 01:06:42.014159     9 group.cpp:419] Trying to create path '/mesos' in ZooKeeper
+I0129 01:06:42.020395    12 group.cpp:341] Group process (zookeeper-group(2)@172.19.10.15:5050) connected to ZooKeeper
+I0129 01:06:42.020476    12 group.cpp:831] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+I0129 01:06:42.020495    12 group.cpp:419] Trying to create path '/mesos' in ZooKeeper
+I0129 01:06:42.078253    12 contender.cpp:268] New candidate (id='0') has entered the contest for leadership
+I0129 01:06:42.083981     7 detector.cpp:152] Detected a new leader: (id='0')
+I0129 01:06:42.084233    11 group.cpp:700] Trying to get '/mesos/json.info_0000000000' in ZooKeeper
+I0129 01:06:42.090401     9 zookeeper.cpp:262] A new leading master (UPID=master@172.19.10.15:5050) is detected
+I0129 01:06:42.090544     8 master.cpp:2113] Elected as the leading master!
+I0129 01:06:42.091348     8 master.cpp:1668] Recovering from registrar
+I0129 01:06:42.092200     9 registrar.cpp:383] Successfully fetched the registry (0B) in 738048ns
+I0129 01:06:42.092330     9 registrar.cpp:487] Applied 1 operations in 37485ns; attempting to update the registry
+I0129 01:06:42.093094     9 registrar.cpp:544] Successfully updated the registry in 724992ns
+I0129 01:06:42.093164     9 registrar.cpp:416] Successfully recovered registrar
+I0129 01:06:42.093333     9 master.cpp:1782] Recovered 0 agents from the registry (136B); allowing 10mins for agents to reregister
+I0129 01:06:45.762603     8 master.cpp:2884] Received SUBSCRIBE call for framework 'marathon' at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:06:45.762711     8 master.cpp:2965] Subscribing framework marathon with checkpointing enabled and capabilities [ PARTITION_AWARE, REGION_AWARE ]
+I0129 01:06:45.763499     8 master.cpp:9860] Adding framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089 with roles {  } suppressed
+I0129 01:06:45.764040     9 hierarchical.cpp:306] Added framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000
+I0129 01:06:50.688901    12 master.cpp:5950] Processing REVIVE call for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:06:50.689045    12 hierarchical.cpp:1385] Revived offers for roles { * } of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000
+I0129 01:06:55.707376    11 master.cpp:5950] Processing REVIVE call for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:06:55.707958    10 hierarchical.cpp:1385] Revived offers for roles { * } of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000
+I0129 01:07:00.717948    13 master.cpp:8889] Performing implicit task state reconciliation for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:07:00.726183     7 master.cpp:5950] Processing REVIVE call for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:07:00.726290     7 hierarchical.cpp:1385] Revived offers for roles { * } of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000
+I0129 01:07:00.748112    12 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:07:15.767834     8 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:07:30.787652     7 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:07:45.807127    13 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:08:00.828215     6 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:08:15.847044    10 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:08:30.866451    12 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:08:45.887280     7 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:09:00.908262     9 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:09:15.928079    11 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:09:30.946626    10 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:09:45.967229     6 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:09:51.609259    12 master.cpp:6592] Received register agent message from slave(1)@172.19.10.19:5051 (172.19.10.19)
+I0129 01:09:51.609647    12 master.cpp:6774] Registering agent at slave(1)@172.19.10.19:5051 (172.19.10.19) with id 42c86315-f266-4afb-9d4c-93d145affdd7-S0
+I0129 01:09:51.609998    10 registrar.cpp:487] Applied 1 operations in 104324ns; attempting to update the registry
+I0129 01:09:51.611196    10 registrar.cpp:544] Successfully updated the registry in 1.117952ms
+I0129 01:09:51.612118    13 master.cpp:6867] Registered agent 42c86315-f266-4afb-9d4c-93d145affdd7-S0 at slave(1)@172.19.10.19:5051 (172.19.10.19) with cpus:4; mem:6631; disk:41669; ports:[31000-32000]
+I0129 01:09:51.612329    12 hierarchical.cpp:601] Added agent 42c86315-f266-4afb-9d4c-93d145affdd7-S0 (172.19.10.19) with cpus:4; mem:6631; disk:41669; ports:[31000-32000] (allocated: {})
+I0129 01:09:51.614661    11 master.cpp:9445] Sending offers [ 42c86315-f266-4afb-9d4c-93d145affdd7-O0 ] to framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:09:51.679482    10 master.cpp:7817] Received update of agent 42c86315-f266-4afb-9d4c-93d145affdd7-S0 at slave(1)@172.19.10.19:5051 (172.19.10.19) with total oversubscribed resources {}
+I0129 01:09:51.679616    10 master.cpp:7926] Ignoring update on agent 42c86315-f266-4afb-9d4c-93d145affdd7-S0 at slave(1)@172.19.10.19:5051 (172.19.10.19) as it reports no changes
+I0129 01:09:51.691968     6 master.cpp:5837] Processing DECLINE call for offers: [ 42c86315-f266-4afb-9d4c-93d145affdd7-O0 ] for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:09:51.692629     6 master.cpp:11439] Removing offer 42c86315-f266-4afb-9d4c-93d145affdd7-O0
+I0129 01:10:06.667214     7 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:10:21.687386     9 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:10:36.707175    10 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:10:51.726878    10 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:00.787832    13 master.cpp:6592] Received register agent message from slave(1)@172.19.10.17:5051 (172.19.10.17)
+I0129 01:11:00.788213    13 master.cpp:6774] Registering agent at slave(1)@172.19.10.17:5051 (172.19.10.17) with id 42c86315-f266-4afb-9d4c-93d145affdd7-S1
+I0129 01:11:00.788611    10 registrar.cpp:487] Applied 1 operations in 129317ns; attempting to update the registry
+I0129 01:11:00.788888    10 registrar.cpp:544] Successfully updated the registry in 211200ns
+I0129 01:11:00.789553    10 master.cpp:6867] Registered agent 42c86315-f266-4afb-9d4c-93d145affdd7-S1 at slave(1)@172.19.10.17:5051 (172.19.10.17) with cpus:4; mem:6631; disk:41669; ports:[31000-32000]
+I0129 01:11:00.789677    12 hierarchical.cpp:601] Added agent 42c86315-f266-4afb-9d4c-93d145affdd7-S1 (172.19.10.17) with cpus:4; mem:6631; disk:41669; ports:[31000-32000] (allocated: {})
+I0129 01:11:00.790107    12 master.cpp:9445] Sending offers [ 42c86315-f266-4afb-9d4c-93d145affdd7-O1 ] to framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:00.794034    11 master.cpp:5837] Processing DECLINE call for offers: [ 42c86315-f266-4afb-9d4c-93d145affdd7-O1 ] for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:00.794579    11 master.cpp:11439] Removing offer 42c86315-f266-4afb-9d4c-93d145affdd7-O1
+I0129 01:11:00.798992    10 master.cpp:7926] Ignoring update on agent 42c86315-f266-4afb-9d4c-93d145affdd7-S1 at slave(1)@172.19.10.17:5051 (172.19.10.17) as it reports no changes
+I0129 01:11:01.541221     8 master.cpp:6592] Received register agent message from slave(1)@172.19.10.18:5051 (172.19.10.18)
+I0129 01:11:01.541504     8 master.cpp:6774] Registering agent at slave(1)@172.19.10.18:5051 (172.19.10.18) with id 42c86315-f266-4afb-9d4c-93d145affdd7-S2
+I0129 01:11:01.541810    11 registrar.cpp:487] Applied 1 operations in 134753ns; attempting to update the registry
+I0129 01:11:01.543159    11 registrar.cpp:544] Successfully updated the registry in 1.27616ms
+I0129 01:11:01.543941    12 master.cpp:6867] Registered agent 42c86315-f266-4afb-9d4c-93d145affdd7-S2 at slave(1)@172.19.10.18:5051 (172.19.10.18) with cpus:4; mem:6631; disk:41669; ports:[31000-32000]
+I0129 01:11:01.544250    12 hierarchical.cpp:601] Added agent 42c86315-f266-4afb-9d4c-93d145affdd7-S2 (172.19.10.18) with cpus:4; mem:6631; disk:41669; ports:[31000-32000] (allocated: {})
+I0129 01:11:01.545148    12 master.cpp:9445] Sending offers [ 42c86315-f266-4afb-9d4c-93d145affdd7-O2 ] to framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:01.550438    10 master.cpp:5837] Processing DECLINE call for offers: [ 42c86315-f266-4afb-9d4c-93d145affdd7-O2 ] for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:01.550624    10 master.cpp:11439] Removing offer 42c86315-f266-4afb-9d4c-93d145affdd7-O2
+I0129 01:11:01.551821    13 master.cpp:7817] Received update of agent 42c86315-f266-4afb-9d4c-93d145affdd7-S2 at slave(1)@172.19.10.18:5051 (172.19.10.18) with total oversubscribed resources {}
+I0129 01:11:01.551910    13 master.cpp:7926] Ignoring update on agent 42c86315-f266-4afb-9d4c-93d145affdd7-S2 at slave(1)@172.19.10.18:5051 (172.19.10.18) as it reports no changes
+I0129 01:11:16.567281    13 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:31.586926    12 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:34.209900    10 master.cpp:5950] Processing REVIVE call for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:34.210263    10 hierarchical.cpp:1385] Revived offers for roles { * } of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000
+I0129 01:11:34.211511    12 master.cpp:9445] Sending offers [ 42c86315-f266-4afb-9d4c-93d145affdd7-O3, 42c86315-f266-4afb-9d4c-93d145affdd7-O4, 42c86315-f266-4afb-9d4c-93d145affdd7-O5 ] to framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:34.405880    11 master.cpp:5837] Processing DECLINE call for offers: [ 42c86315-f266-4afb-9d4c-93d145affdd7-O4 ] for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:34.406191    11 master.cpp:11439] Removing offer 42c86315-f266-4afb-9d4c-93d145affdd7-O4
+I0129 01:11:34.408347    10 master.cpp:5837] Processing DECLINE call for offers: [ 42c86315-f266-4afb-9d4c-93d145affdd7-O5 ] for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:34.408629    10 master.cpp:11439] Removing offer 42c86315-f266-4afb-9d4c-93d145affdd7-O5
+I0129 01:11:34.522037     8 master.cpp:11439] Removing offer 42c86315-f266-4afb-9d4c-93d145affdd7-O3
+I0129 01:11:34.522492     8 master.cpp:4454] Processing ACCEPT call for offers: [ 42c86315-f266-4afb-9d4c-93d145affdd7-O3 ] on agent 42c86315-f266-4afb-9d4c-93d145affdd7-S0 at slave(1)@172.19.10.19:5051 (172.19.10.19) for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:34.529675    12 master.cpp:12159] Adding task 1234.c387dcb9-231f-11e9-857e-0242ac130a14 with resources cpus(allocated: *):1; mem(allocated: *):128; ports(allocated: *):[31478-31478] on agent 42c86315-f266-4afb-9d4c-93d145affdd7-S0 at slave(1)@172.19.10.19:5051 (172.19.10.19)
+I0129 01:11:34.529947    12 master.cpp:5426] Launching task 1234.c387dcb9-231f-11e9-857e-0242ac130a14 of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089 with resources [{"allocation_info":{"role":"*"},"name":"cpus","scalar":{"value":1.0},"type":"SCALAR"},{"allocation_info":{"role":"*"},"name":"mem","scalar":{"value":128.0},"type":"SCALAR"},{"allocation_info":{"role":"*"},"name":"ports","ranges":{"range":[{"begin":31478,"end":31478}]},"type":"RANGES"}] on agent 42c86315-f266-4afb-9d4c-93d145affdd7-S0 at slave(1)@172.19.10.19:5051 (172.19.10.19) on  new executor
+I0129 01:11:34.666121     6 master.cpp:8362] Status update TASK_STARTING (Status UUID: 788a3e2f-81c5-4928-9816-5729cfc59078) for task 1234.c387dcb9-231f-11e9-857e-0242ac130a14 of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 from agent 42c86315-f266-4afb-9d4c-93d145affdd7-S0 at slave(1)@172.19.10.19:5051 (172.19.10.19)
+I0129 01:11:34.666234     6 master.cpp:8419] Forwarding status update TASK_STARTING (Status UUID: 788a3e2f-81c5-4928-9816-5729cfc59078) for task 1234.c387dcb9-231f-11e9-857e-0242ac130a14 of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000
+I0129 01:11:34.670192     6 master.cpp:10909] Updating the state of task 1234.c387dcb9-231f-11e9-857e-0242ac130a14 of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (latest state: TASK_STARTING, status update state: TASK_STARTING)
+I0129 01:11:34.715023     9 master.cpp:6228] Processing ACKNOWLEDGE call for status 788a3e2f-81c5-4928-9816-5729cfc59078 for task 1234.c387dcb9-231f-11e9-857e-0242ac130a14 of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089 on agent 42c86315-f266-4afb-9d4c-93d145affdd7-S0
+I0129 01:11:34.717049    12 master.cpp:8362] Status update TASK_RUNNING (Status UUID: 620acc90-6a0a-4be1-af38-7d38ee4a699b) for task 1234.c387dcb9-231f-11e9-857e-0242ac130a14 of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 from agent 42c86315-f266-4afb-9d4c-93d145affdd7-S0 at slave(1)@172.19.10.19:5051 (172.19.10.19)
+I0129 01:11:34.717129    12 master.cpp:8419] Forwarding status update TASK_RUNNING (Status UUID: 620acc90-6a0a-4be1-af38-7d38ee4a699b) for task 1234.c387dcb9-231f-11e9-857e-0242ac130a14 of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000
+I0129 01:11:34.717329    12 master.cpp:10909] Updating the state of task 1234.c387dcb9-231f-11e9-857e-0242ac130a14 of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (latest state: TASK_RUNNING, status update state: TASK_RUNNING)
+I0129 01:11:34.745466     7 master.cpp:6228] Processing ACKNOWLEDGE call for status 620acc90-6a0a-4be1-af38-7d38ee4a699b for task 1234.c387dcb9-231f-11e9-857e-0242ac130a14 of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089 on agent 42c86315-f266-4afb-9d4c-93d145affdd7-S0
+I0129 01:11:35.234035    11 master.cpp:9445] Sending offers [ 42c86315-f266-4afb-9d4c-93d145affdd7-O6 ] to framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:35.238903     7 master.cpp:5837] Processing DECLINE call for offers: [ 42c86315-f266-4afb-9d4c-93d145affdd7-O6 ] for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:35.239254     7 master.cpp:11439] Removing offer 42c86315-f266-4afb-9d4c-93d145affdd7-O6
+I0129 01:11:39.227074     7 master.cpp:5950] Processing REVIVE call for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:39.227264     7 hierarchical.cpp:1385] Revived offers for roles { * } of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000
+I0129 01:11:39.233263     9 master.cpp:9445] Sending offers [ 42c86315-f266-4afb-9d4c-93d145affdd7-O7, 42c86315-f266-4afb-9d4c-93d145affdd7-O8, 42c86315-f266-4afb-9d4c-93d145affdd7-O9 ] to framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:39.238276    10 master.cpp:5837] Processing DECLINE call for offers: [ 42c86315-f266-4afb-9d4c-93d145affdd7-O7 ] for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:39.238469    10 master.cpp:11439] Removing offer 42c86315-f266-4afb-9d4c-93d145affdd7-O7
+I0129 01:11:39.238647     6 master.cpp:5837] Processing DECLINE call for offers: [ 42c86315-f266-4afb-9d4c-93d145affdd7-O8 ] for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:39.238740     6 master.cpp:11439] Removing offer 42c86315-f266-4afb-9d4c-93d145affdd7-O8
+I0129 01:11:39.238862     8 master.cpp:5837] Processing DECLINE call for offers: [ 42c86315-f266-4afb-9d4c-93d145affdd7-O9 ] for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:39.238946     8 master.cpp:11439] Removing offer 42c86315-f266-4afb-9d4c-93d145affdd7-O9
+I0129 01:11:44.247375    12 master.cpp:5950] Processing REVIVE call for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:44.247579    12 hierarchical.cpp:1385] Revived offers for roles { * } of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000
+I0129 01:11:44.249584    12 master.cpp:9445] Sending offers [ 42c86315-f266-4afb-9d4c-93d145affdd7-O10, 42c86315-f266-4afb-9d4c-93d145affdd7-O11, 42c86315-f266-4afb-9d4c-93d145affdd7-O12 ] to framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:44.254153     6 master.cpp:5837] Processing DECLINE call for offers: [ 42c86315-f266-4afb-9d4c-93d145affdd7-O10 ] for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:44.254878     6 master.cpp:11439] Removing offer 42c86315-f266-4afb-9d4c-93d145affdd7-O10
+I0129 01:11:44.254998     6 master.cpp:5837] Processing DECLINE call for offers: [ 42c86315-f266-4afb-9d4c-93d145affdd7-O11 ] for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:44.255148     6 master.cpp:11439] Removing offer 42c86315-f266-4afb-9d4c-93d145affdd7-O11
+I0129 01:11:44.256419    11 master.cpp:5837] Processing DECLINE call for offers: [ 42c86315-f266-4afb-9d4c-93d145affdd7-O12 ] for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:11:44.256649    11 master.cpp:11439] Removing offer 42c86315-f266-4afb-9d4c-93d145affdd7-O12
+I0129 01:11:59.266887    11 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:12:02.348449    11 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._0 from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:12:12.698714     6 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._3 from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:12:14.287973    10 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:12:22.712975    10 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._5 from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:12:29.307696     7 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:12:32.726147    12 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._7 from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:12:42.741160     8 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._9 from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:12:44.327342     6 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:12:53.716816     7 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._b from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:12:59.347491     8 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:13:04.483635     6 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._d from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:13:14.366948    13 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:13:14.502332     9 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._f from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:13:24.521494    10 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._h from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:13:29.386778     8 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:13:34.536880    11 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._j from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:13:44.381546     8 master.cpp:9445] Sending offers [ 42c86315-f266-4afb-9d4c-93d145affdd7-O13, 42c86315-f266-4afb-9d4c-93d145affdd7-O14, 42c86315-f266-4afb-9d4c-93d145affdd7-O15 ] to framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:13:44.387372    12 master.cpp:5837] Processing DECLINE call for offers: [ 42c86315-f266-4afb-9d4c-93d145affdd7-O13 ] for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:13:44.388403    12 master.cpp:11439] Removing offer 42c86315-f266-4afb-9d4c-93d145affdd7-O13
+I0129 01:13:44.389338     9 master.cpp:5837] Processing DECLINE call for offers: [ 42c86315-f266-4afb-9d4c-93d145affdd7-O14 ] for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:13:44.389547     9 master.cpp:11439] Removing offer 42c86315-f266-4afb-9d4c-93d145affdd7-O14
+I0129 01:13:44.390511     7 master.cpp:5837] Processing DECLINE call for offers: [ 42c86315-f266-4afb-9d4c-93d145affdd7-O15 ] for framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:13:44.390708     7 master.cpp:11439] Removing offer 42c86315-f266-4afb-9d4c-93d145affdd7-O15
+I0129 01:13:44.551889     8 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._l from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:13:54.593796    11 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._n from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:13:59.397742    13 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:14:04.616531     6 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._p from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:14:14.417307     8 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:14:14.636234     8 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._r from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:14:24.653673     9 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._t from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:14:29.437821     6 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:14:34.668644    12 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._v from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:14:44.458099    11 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:14:44.682425    13 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._x from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:14:54.698366     8 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._z from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:14:59.477768    11 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:15:04.726333     9 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._11 from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:15:14.497347     6 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
+I0129 01:15:14.742413    12 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._13 from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:15:24.754926     9 http.cpp:1117] HTTP GET for /master/state?jsonp=angular.callbacks._15 from 172.19.0.1:45872 with User-Agent='Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+I0129 01:15:29.516937    11 master.cpp:8955] Performing explicit task state reconciliation for 1 tasks of framework 42c86315-f266-4afb-9d4c-93d145affdd7-0000 (marathon) at scheduler-14b8a216-6cdb-4024-93c3-6d25334ed098@172.19.10.20:40089
